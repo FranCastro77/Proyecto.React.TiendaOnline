@@ -10,10 +10,17 @@ const NavBar = () => {
           <img src={logo} alt="" />
         </div>
         <ul>
-          <li>Quienes somos</li>
-          <li>Como contactarnos</li>
           <li>
-            <a href = "http://localhost:3000/#catalogo" > Nuestras propuestas </a>
+            <a href = "/#" > Quienes somos </a>
+          </li>
+          
+            
+          <li>
+            <a href = "/#" > Contactanos </a>
+          </li>
+          
+          <li>
+            <a href = "/#" > Nuestras propuestas </a>
             </li>
             
           <CartWidget/>

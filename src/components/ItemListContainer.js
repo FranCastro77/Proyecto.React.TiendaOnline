@@ -1,23 +1,14 @@
 import React from 'react'
 
-const ItemListContainer = ({product, description, cantidad}) => {
+const ItemListContainer = () => {
   return (
 
     <main>
 
-        <div className="ListContainer">
-
-           <article>
-            
-                Codigo:{product} - Descripcion:{description} - Cantidad:{cantidad}
-            
-            </article> 
-
-
-
-
-        </div>
-
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+     
     </main>
 
   )
