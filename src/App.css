@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* ---------------------------------------------------------------------------------- */
+
+/* Estilos agregados */
+
+.NavBar {
+
+
+  min-width: 10vw;
+  border: 0.1rem solid;
+  /* border-bottom: 0.3rem solid #4790FC;  */
+  font-size: 1em;
+  font-style:normal;
+  text-align: center;
+  background-image: linear-gradient(
+  75deg,
+  hsl(359deg 85% 53%) 0%,
+  hsl(356deg 84% 62%) 7%,
+  hsl(353deg 84% 67%) 14%,
+  hsl(350deg 85% 72%) 21%,
+  hsl(347deg 87% 76%) 29%,
+  hsl(343deg 89% 79%) 36%,
+  hsl(339deg 93% 82%) 43%,
+  hsl(335deg 97% 85%) 50%,
+  hsl(335deg 93% 87%) 57%,
+  hsl(335deg 88% 89%) 64%,
+  hsl(335deg 82% 91%) 71%,
+  hsl(334deg 72% 92%) 79%,
+  hsl(333deg 58% 94%) 86%,
+  hsl(328deg 35% 95%) 93%,
+  hsl(210deg 12% 97%) 100%
+);
+
+
+}
+
+.NavBar ul {
+
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: row;
+  color:rgb(116, 5, 38);
+  flex-basis: 25%;
+  font-size: 1.2em; 
+  text-align: center;
+  text-decoration: none;
+  
+
+
+}
+
+.NavBar li {
+
+  
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  color: #2e61ad;
+  
+}
+
+.NavBar h1 {
+  font-size: 3em;
+  font-style:normal;
+  text-align: center;
+}
+
+.CartWidgetContainer{
+
+ margin-left: 15rem;
+
+}
+
+.Logo img{
+  max-inline-size: 50%;
+  max-height: 30%;
+  max-width: 50%;
+  
+}
