@@ -1,21 +1,34 @@
 import React from 'react'
+import Sprinkle from "../assets/images/Sprinkle.jpg" 
+import ItemCount from './ItemCount'
+
+
 
 const ItemListContainer = () => {
+
+  const onAdd = (contador) => {
+
+    console.log ("El cliente ha seleccionado la siguiente cantidad:", contador)
+  }
+
+
   return (
 
     <main>
 
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
 
-    <h2 className="text-3xl font-bold underline">
-      Bienvenidos a la prueba!
-    </h2>
+      <div className="Catalogo">
+            <img src={Sprinkle} alt="" />
 
-    <h3 className="text-3xl font-bold underline">
-      Ultima prueba!
-    </h3>
+      </div>
+
+      <h1 className="ml-20">
+      Esmalte Sprinkle - Chico
+      </h1>
+
+      <ItemCount stock={17} initial={1} onAdd ={onAdd}/>
+
+   
      
     </main>
 

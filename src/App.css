@@ -116,6 +116,15 @@
 .Logo img{
   max-inline-size: 50%;
   max-height: 30%;
-  max-width: 50%;
-  
+  max-width: 50%; 
+}
+
+.Catalogo {
+  max-width: 15%;
+  max-height: 15%;
+  margin-left: 5rem;
+}
+
+.DescProducto h1{
+  margin-left: 25rem;
 }
