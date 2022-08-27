@@ -22,7 +22,7 @@ const ItemListContainer = () => {
 
       </div>
 
-      <h1 className="ml-20">
+      <h1 className="bg-primary">
       Esmalte Sprinkle - Chico
       </h1>
 
