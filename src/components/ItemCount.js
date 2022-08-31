@@ -3,6 +3,8 @@ import React, {useState} from 'react'
 const ItemCount = ({stock, initial, onAdd}) =>{
     const [contador, setcontador] = useState(initial)
 
+  
+
     const agregarContador = () => {
         if (contador < stock)
             setcontador(contador + 1)
@@ -15,10 +17,12 @@ const ItemCount = ({stock, initial, onAdd}) =>{
 
     return(
         <>
-        
-            <button onClick={disminuirContador}className="btn btn-active btn-ghost">-</button>
-            <span>{contador}</span>
-            <button onClick={agregarContador} className="btn btn-active btn-ghost">+</button>
+            <div>
+                <button onClick={disminuirContador}className="badge badge-outline">-</button>
+                <span>{contador}</span>
+                <button onClick={agregarContador} className="badge badge-outline">+</button>
+            </div>
+            
             <div><button disabled={contador === 0} onClick={()=>onAdd(contador)}>Agregar a Carrito</button></div>
         
         </>

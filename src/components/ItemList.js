@@ -6,15 +6,16 @@ const ItemList = ({products}) => {
 
     <>
 
-  
-      {products?.map((p) =>
+    <div className="justify-items-center  grid gap-6 grid-cols-3 grid-rows-2">
+
+        {products.length ?  products.map((product) => <Item key={product.id} {...product} />)  : <h3 className="text-center">Estamos preparando los colores...</h3>}
               
-      <Item key={p.id} title={p.title} description={p.description} image={p.image} /> 
-      )}
+    </div>
+      
        
     </>
 
   );
-}
+};
 
 export default ItemList;
