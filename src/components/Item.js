@@ -5,12 +5,12 @@ const Item = ({title, img, price}) => {
 
   const onAdd = (contador) => {
 
-    console.log ("El cliente ha seleccionado la siguiente cantidad:", contador)
+    console.log ("El cliente ha seleccionado la siguiente cantidad:", contador, "del producto ", title)
   }
 
 
   return (
-    <article className="card w-96 bg-base-100 shadow-xl">
+    <article className="card w-96 bg-base-100 shadow-xl bg-secondary-focus text-center mt-20 ">
         
         <h1>{title}</h1>
         <img src={img} alt=""/>

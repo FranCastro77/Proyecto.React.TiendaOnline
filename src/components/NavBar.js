@@ -5,11 +5,10 @@ import logo from '../assets/images/logo.png'
 const NavBar = () => {
   return (
     <header>
-      <nav>
-      <div className="Logo">
+      <nav className="mb-10">
+        <div className="align-center inline-flex gap-x-20 text-align ml-20 mt-10">
           <img src={logo} alt="" />
-        </div>
-        <ul>
+          <ul className="inline-flex gap-x-20 mt-20 pt-10">
           <li>
             <a href = "/#" > Quienes somos </a>
           </li>
@@ -25,6 +24,9 @@ const NavBar = () => {
             
           <CartWidget/>
         </ul>
+
+        </div>
+        
       </nav>
     </header>
   )

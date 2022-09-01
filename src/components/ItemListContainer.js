@@ -8,12 +8,6 @@ import myProducts from "../components/myProducts.json";
 const ItemListContainer = () => {
 
 
-  // const onAdd = (contador) => {
-
-  //   console.log ("El cliente ha seleccionado la siguiente cantidad:", contador)
-  // }
-  
-
   const [products, setProducts] = useState([]);
 
     const getProducts = (data, time) => new Promise((resolve, reject) =>{
@@ -60,74 +54,6 @@ const ItemListContainer = () => {
     </>
   ) 
 
-
-
-
-
   }
-
-  // const onAdd = (contador) => {
-
-  //   console.log ("El cliente ha seleccionado la siguiente cantidad:", contador)
-  // }
-
-
-  // return (
-
-  //   <main>
-
-
-  //     <div className="Catalogo">
-  //           <img src={Sprinkle} alt="" />
-
-  //     </div>
-
-  //     <h1 className="bg-primary">
-  //     Esmalte Sprinkle - Chico
-  //     </h1>
-
-  //     <ItemCount stock={17} initial={1} onAdd ={onAdd}/>
-  //     <section>
-  //       <ItemList data={products}/>
-  //     </section>
-
-  //   </main>
-
-  
-
-
-
-
-
-
-
-//   const onAdd = (contador) => {
-
-//     console.log ("El cliente ha seleccionado la siguiente cantidad:", contador)
-//   }
-
-
-//   return (
-
-//     <main>
-
-
-//       <div className="Catalogo">
-//             <img src={Sprinkle} alt="" />
-
-//       </div>
-
-//       <h1 className="bg-primary">
-//       Esmalte Sprinkle - Chico
-//       </h1>
-
-//       <ItemCount stock={17} initial={1} onAdd ={onAdd}/>
-
-   
-     
-//     </main>
-
-//   )
-// }
 
 export default ItemListContainer
