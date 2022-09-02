@@ -1,0 +1,50 @@
+[
+    {
+        "id": "001",
+        "title": "ADDISON",
+        "price": 390,
+        "img": "./img/Addison.jpg"
+
+    },
+
+    {
+        "id": "002",
+        "title": "MAX",
+        "price": 390,
+        "img": "./img/Max.jpg"
+
+    },
+
+    {
+        "id": "003",
+        "title": "MILLIE",
+        "price": 420,
+        "img": "./img/Millie.jpg"
+
+    },
+
+    {
+        "id": "004",
+        "title": "MAROON",
+        "price": 280,
+        "img": "./img/Maroon.jpg"
+
+    },
+
+    {
+        "id": "005",
+        "title": "NOAH",
+        "price": 390,
+        "img": "./img/Noah.jpg"
+
+    },
+
+    {
+        "id": "006",
+        "title": "COCO",
+        "price": 390,
+        "img": "./img/Coco.jpg"
+
+    }
+
+]
