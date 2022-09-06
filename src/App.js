@@ -1,10 +1,9 @@
-// import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Contact from './components/Contact';
 import AboutUs from './components/AboutUs';
-import ItemDetail from './components/ItemDetail';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 
 
@@ -13,7 +12,6 @@ function App() {
   return (
 
     <>
-    {/* <NavBar/> */}
 
     <BrowserRouter>
 
@@ -23,14 +21,11 @@ function App() {
         <Route path= '/Item' element= { <ItemListContainer/> } />
         <Route path= '/Contact' element= { <Contact/> } />
         <Route path= '/AUs' element= { <AboutUs/> } />
-        <Route path= '/Item/:id' element= { <ItemDetail/> } />
+        <Route path= '/Item/:id' element= { <ItemDetailContainer/> } />
       </Routes>
 
     </BrowserRouter>
 
-
-
-    {/* <ItemListContainer/> */}
     </>
     
     

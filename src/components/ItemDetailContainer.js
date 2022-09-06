@@ -5,55 +5,41 @@ import ItemDetail from './ItemDetail';
 
 
 
-const ItemDetailContainer = ({id}) => {
+const ItemDetailContainer = () => {
 
-  const {id} = useParams()
+  const {id} = useParams();
 
-  const [productDetail, setProductDetail] = useState([]);
+  const [item, setItem] = useState({});
 
-    const getProductDetail = (data, time) => new Promise((resolve, reject) =>{
+    
+  useEffect(()=>{
+
+    new Promise((resolve) =>{
 
       setTimeout(() => {
         
-        if({id}){
-            resolve(data)
-        }else{
-          reject("Error")
-        }
+            resolve(myProducts.find((element)=>element.id === id));
+        }, 4000)
+    }).then((data)=>{
 
-      }, time);
+      setItem(data)
     })
 
-    useEffect(()=>{
-
-        getProductDetail(myProducts,2000).then((res)=>{
-          setProductDetail(res)
-        }).catch((err)=>console.log(err, ":Producto inexistente"))
-  
-      }, []);
+  }, [id])
     
+
       return (
         <>
     
-          <main className="justify-center">
-    
-    
-            <h1 className="text-center font-sans text-4xl"> NUESTROS PRODUCTOS</h1>
-           
-    
-            <section className="flex-row">
-              
-              <ItemDetail products={productDetail}/>
-    
-            </section>
-    
-            
-    
-          </main>
+       <div>
+        
+          {Object.getOwnPropertyNames(item).length && <ItemDetail item={item}/>}
+        
+        </div>
             
         </>
       ) 
-    
-      }
+  }
+  
     
     export default ItemDetailContainer
