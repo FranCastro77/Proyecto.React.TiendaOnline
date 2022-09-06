@@ -1,48 +1,54 @@
 [
     {
-        "id": "001",
+        "id": "1",
         "title": "ADDISON",
         "price": 390,
+        "description": "Aca va la informacion detallada del producto ADDISON",
         "img": "./img/Addison.jpg"
 
     },
 
     {
-        "id": "002",
+        "id": "2",
         "title": "MAX",
         "price": 390,
+        "description": "Aca va la informacion detallada del producto MAX",
         "img": "./img/Max.jpg"
 
     },
 
     {
-        "id": "003",
+        "id": "3",
         "title": "MILLIE",
         "price": 420,
+        "description": "Aca va la informacion detallada del producto MILLIE",
         "img": "./img/Millie.jpg"
 
     },
 
     {
-        "id": "004",
+        "id": "4",
         "title": "MAROON",
         "price": 280,
+        "description": "Aca va la informacion detallada del producto MAROON",
         "img": "./img/Maroon.jpg"
 
     },
 
     {
-        "id": "005",
+        "id": "5",
         "title": "NOAH",
         "price": 390,
+        "description": "Aca va la informacion detallada del producto NOAH",
         "img": "./img/Noah.jpg"
 
     },
 
     {
-        "id": "006",
+        "id": "6",
         "title": "COCO",
         "price": 390,
+        "description": "Aca va la informacion detallada del producto COCO",
         "img": "./img/Coco.jpg"
 
     }
