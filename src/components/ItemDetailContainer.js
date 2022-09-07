@@ -13,30 +13,30 @@ const ItemDetailContainer = () => {
 
   const [item, setItem] = useState({});
 
-    const getItem = (data, time) => new Promise ((resolve, reject) => {
+    const getItem = (products, time, idParams) => new Promise ((resolve, reject) => {
       
       setTimeout(() => {
         
-        if(data){
-          resolve(myProducts.find( element => element.id === id ) )
+        if(products){
+          resolve(products.find( element => element.id === idParams ) )
         }else{
           reject("Error")
         }
-      }, time);
+      }, time, idParams);
     })
     
 
     useEffect(()=>{
 
-      getItem(myProducts,2000).then((res)=>{
+      getItem(myProducts,2000, id).then((res)=>{
         setItem(res)
       }).catch((err)=>console.log(err, ":Producto inexistente"))
 
-    }, []);
+    }, [id]);
 
     return (
       <>
-  
+        
         <main className="justify-center">
   
   
@@ -45,7 +45,7 @@ const ItemDetailContainer = () => {
   
           <section className="flex-row">
             
-            <ItemDetail item={item}/>
+            <ItemDetail {...item}/>
   
           </section>
   

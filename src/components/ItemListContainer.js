@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-// import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 import myProducts from "../components/myProducts.json";
 

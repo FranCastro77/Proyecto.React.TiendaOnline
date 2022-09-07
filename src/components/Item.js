@@ -2,7 +2,7 @@ import React from 'react'
 import ItemCount from './ItemCount'
 import {Link} from "react-router-dom";
 
-const Item = ({title, img, price}) => {
+const Item = ({id, title, img, price}) => {
 
   const onAdd = (contador) => {
 
@@ -14,7 +14,7 @@ const Item = ({title, img, price}) => {
     <article className="card w-96 bg-base-100 shadow-xl bg-secondary-focus text-center mt-20 ">
         
         <h1>{title}</h1>
-        <Link to={'/Item/:id'}>
+        <Link to= {`/Item/${id}`} key={id}>
         <img src={img} alt=""/>
         </Link>
      

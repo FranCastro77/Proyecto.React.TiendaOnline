@@ -6,7 +6,9 @@
         "category": "mas vendidos",
         "price": 390,
         "description": "Aca va la informacion detallada del producto ADDISON",
-        "img": "./img/Addison.jpg"
+        "img": "./img/Addison.jpg",
+        "URLImg": "https://i.postimg.cc/R07Xb6sX/Addison.jpg"
+        
 
     },
 
@@ -17,7 +19,8 @@
         "title": "MAX",
         "price": 390,
         "description": "Aca va la informacion detallada del producto MAX",
-        "img": "./img/Max.jpg"
+        "img": "./img/Max.jpg",
+        "URLImg": "https://i.postimg.cc/JnT39bbc/Max.jpg"
 
     },
 
@@ -28,7 +31,9 @@
         "title": "MILLIE",
         "price": 420,
         "description": "Aca va la informacion detallada del producto MILLIE",
-        "img": "./img/Millie.jpg"
+        "img": "./img/Millie.jpg",
+        "URLImg": "https://i.postimg.cc/JnRPwrSm/Millie.jpg"
+      
 
     },
 
@@ -39,7 +44,8 @@
         "title": "MAROON",
         "price": 280,
         "description": "Aca va la informacion detallada del producto MAROON",
-        "img": "./img/Maroon.jpg"
+        "img": "./img/Maroon.jpg",
+        "URLImg": "https://i.postimg.cc/6pGHn1ds/Maroon.jpg"
 
     },
 
@@ -50,7 +56,8 @@
         "title": "NOAH",
         "price": 390,
         "description": "Aca va la informacion detallada del producto NOAH",
-        "img": "./img/Noah.jpg"
+        "img": "./img/Noah.jpg",
+        "URLImg": "https://i.postimg.cc/VvVRbjvL/Noah.jpg"
 
     },
 
@@ -61,7 +68,8 @@
         "title": "COCO",
         "price": 390,
         "description": "Aca va la informacion detallada del producto COCO",
-        "img": "./img/Coco.jpg"
+        "img": "./img/Coco.jpg",
+        "URLImg": "https://i.postimg.cc/qRGDgh2z/Coco.jpg"
 
     }
 

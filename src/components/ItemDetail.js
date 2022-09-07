@@ -2,7 +2,8 @@ import React from 'react';
 import ItemCount from './Item'
 
 
-const ItemDetail = ({id, title, price, description, img}) => {
+
+const ItemDetail = ({id, title, URLImg, price, description}) => {
    
   
 
@@ -13,20 +14,19 @@ const ItemDetail = ({id, title, price, description, img}) => {
       }
 
 
-    
-  
-
-
     return (
 
     <>
-    <div>
+  
+
+    <article className="card w-96 bg-base-100 shadow-xl bg-secondary-focus text-center mt-20 ">
+
+        <img className='imgItem' src={URLImg} alt=""/>
         <h1>{title} - {id}</h1>
-        <img src={img} alt=""/>
         <h2>{description}</h2>
         <h3>{price}</h3>
         <ItemCount stock={17} initial={1} onAdd ={onAdd}/>
-    </div>
+    </article>
       
       
        
