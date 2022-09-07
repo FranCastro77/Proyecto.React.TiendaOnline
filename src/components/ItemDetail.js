@@ -1,15 +1,22 @@
 import React from 'react';
 import ItemCount from './Item'
 
-const ItemDetail = ({item}) => {
-    
+
+const ItemDetail = ({id, title, price, description, img}) => {
+   
+  
+
+
     const onAdd = (contador) => {
 
         console.log ("El cliente ha seleccionado la siguiente cantidad:", contador, "del producto ", title)
       }
 
-    const {id, title, price, description, img} = item;
+
     
+  
+
+
     return (
 
     <>
