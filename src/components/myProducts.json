@@ -1,7 +1,9 @@
 [
     {
         "id": "1",
+        "slug": "addison",
         "title": "ADDISON",
+        "category": "mas vendidos",
         "price": 390,
         "description": "Aca va la informacion detallada del producto ADDISON",
         "img": "./img/Addison.jpg"
@@ -10,6 +12,8 @@
 
     {
         "id": "2",
+        "slug": "max",
+        "category": "mas vendidos",
         "title": "MAX",
         "price": 390,
         "description": "Aca va la informacion detallada del producto MAX",
@@ -19,6 +23,8 @@
 
     {
         "id": "3",
+        "slug": "millie",
+        "category": "nuevos",
         "title": "MILLIE",
         "price": 420,
         "description": "Aca va la informacion detallada del producto MILLIE",
@@ -28,6 +34,8 @@
 
     {
         "id": "4",
+        "slug": "maroon",
+        "category": "nuevos",
         "title": "MAROON",
         "price": 280,
         "description": "Aca va la informacion detallada del producto MAROON",
@@ -37,6 +45,8 @@
 
     {
         "id": "5",
+        "slug": "noah",
+        "category": "mas vendidos",
         "title": "NOAH",
         "price": 390,
         "description": "Aca va la informacion detallada del producto NOAH",
@@ -46,6 +56,8 @@
 
     {
         "id": "6",
+        "slug": "coco",
+        "category": "nuevos",
         "title": "COCO",
         "price": 390,
         "description": "Aca va la informacion detallada del producto COCO",
