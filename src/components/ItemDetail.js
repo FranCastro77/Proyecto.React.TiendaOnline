@@ -21,8 +21,8 @@ const ItemDetail = ({id, title, URLImg, price, description}) => {
 
     <article className="card w-96 bg-base-100 shadow-xl bg-secondary-focus text-center mt-20 ">
 
-        <img className='imgItem' src={URLImg} alt=""/>
         <h1>{title} - {id}</h1>
+        <img className='imgItem' src={URLImg} alt=""/>
         <h2>{description}</h2>
         <h3>{price}</h3>
         <ItemCount stock={17} initial={1} onAdd ={onAdd}/>

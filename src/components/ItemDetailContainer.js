@@ -17,7 +17,8 @@ const ItemDetailContainer = () => {
       
       setTimeout(() => {
         
-        if(products){
+        if(products) {
+        
           resolve(products.find( element => element.id === idParams ) )
         }else{
           reject("Error")
@@ -27,6 +28,7 @@ const ItemDetailContainer = () => {
     
 
     useEffect(()=>{
+
 
       getItem(myProducts,2000, id).then((res)=>{
         setItem(res)
@@ -44,8 +46,21 @@ const ItemDetailContainer = () => {
          
   
           <section className="flex-row">
+
+          { Object.entries(item).length === 0 ?
+                <div>
+                  <h3>Obteniendo mas datos de tu producto...</h3>
+                </div>
+            : 
+               <ItemDetail {...item} />
+            }
+          
+          
+          
+             
+            {/* <ItemDetail {...item}/> */}
             
-            <ItemDetail {...item}/>
+            
   
           </section>
   

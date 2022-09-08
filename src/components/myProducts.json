@@ -3,7 +3,7 @@
         "id": "1",
         "slug": "addison",
         "title": "ADDISON",
-        "category": "mas vendidos",
+        "category": "clasicos",
         "price": 390,
         "description": "Aca va la informacion detallada del producto ADDISON",
         "img": "./img/Addison.jpg",
@@ -15,7 +15,7 @@
     {
         "id": "2",
         "slug": "max",
-        "category": "mas vendidos",
+        "category": "nuevos",
         "title": "MAX",
         "price": 390,
         "description": "Aca va la informacion detallada del producto MAX",
@@ -52,7 +52,7 @@
     {
         "id": "5",
         "slug": "noah",
-        "category": "mas vendidos",
+        "category": "clasicos",
         "title": "NOAH",
         "price": 390,
         "description": "Aca va la informacion detallada del producto NOAH",
