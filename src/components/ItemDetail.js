@@ -19,7 +19,7 @@ const ItemDetail = ({id, title, URLImg, price, description}) => {
     <>
   
 
-    <article className="card w-96 bg-base-100 shadow-xl bg-secondary-focus text-center mt-20 ">
+    <article className="card w-96 bg-base-100 shadow-xl text-center mt-20 ">
 
         <h1>{title} - {id}</h1>
         <img className='imgItem' src={URLImg} alt=""/>

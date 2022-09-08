@@ -2,7 +2,7 @@ import React from 'react'
 import ItemCount from './ItemCount'
 import {Link} from "react-router-dom";
 
-const Item = ({id, title, img, price}) => {
+const Item = ({id, title, URLImg, price}) => {
 
   const onAdd = (contador) => {
 
@@ -11,14 +11,14 @@ const Item = ({id, title, img, price}) => {
 
 
   return (
-    <article className="card w-96 bg-base-100 shadow-xl bg-secondary-focus text-center mt-20 ">
+    <article className="card w-96 bg-base-100 shadow-xl text-center mt-20 ">
         
-        <h1>{title}</h1>
+        <h1 className="font-sans text-2xl">{title}</h1>
         <Link to= {`/Item/${id}`} key={id}>
-        <img src={img} alt=""/>
+        <img src={URLImg} alt=""/>
         </Link>
      
-        <h2>{price}</h2>
+        <h2 className="font-sans text-2xl">{price}</h2>
         <ItemCount stock={17} initial={1} onAdd ={onAdd}/>
 
     </article>

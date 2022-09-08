@@ -1,7 +1,7 @@
 import React from 'react'
-import CartWidget from './CartWidget'
 import logo from '../assets/images/logo.png'
 import {NavLink} from "react-router-dom";
+import CartWidget from './CartWidget';
 
 
 const NavBar = () => {
@@ -31,7 +31,7 @@ const NavBar = () => {
           </li>
 
           <li>
-          <NavLink to={'/'}>
+          <NavLink to={'/Cart'}>
             <CartWidget/>
           </NavLink>
             {/* <a href = "/#" > Nuestras propuestas </a> */}

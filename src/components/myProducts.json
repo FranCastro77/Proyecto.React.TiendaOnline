@@ -4,8 +4,8 @@
         "slug": "addison",
         "title": "ADDISON",
         "category": "clasicos",
-        "price": 390,
-        "description": "Aca va la informacion detallada del producto ADDISON",
+        "price": "$390",
+        "description": "No tóxico para uñas Efecto Gel- Vegano - Cruelty Free - Genderless - Color: Addison",
         "img": "./img/Addison.jpg",
         "URLImg": "https://i.postimg.cc/R07Xb6sX/Addison.jpg"
         
@@ -17,8 +17,8 @@
         "slug": "max",
         "category": "nuevos",
         "title": "MAX",
-        "price": 390,
-        "description": "Aca va la informacion detallada del producto MAX",
+        "price": "$390",
+        "description": "No tóxico para uñas Efecto Gel- Vegano - Cruelty Free - Genderless - Color: MAX",
         "img": "./img/Max.jpg",
         "URLImg": "https://i.postimg.cc/JnT39bbc/Max.jpg"
 
@@ -29,8 +29,8 @@
         "slug": "millie",
         "category": "nuevos",
         "title": "MILLIE",
-        "price": 420,
-        "description": "Aca va la informacion detallada del producto MILLIE",
+        "price": "$420",
+        "description": "No tóxico para uñas Efecto Gel- Vegano - Cruelty Free - Genderless - Color: MILLIE",
         "img": "./img/Millie.jpg",
         "URLImg": "https://i.postimg.cc/JnRPwrSm/Millie.jpg"
       
@@ -42,8 +42,8 @@
         "slug": "maroon",
         "category": "nuevos",
         "title": "MAROON",
-        "price": 280,
-        "description": "Aca va la informacion detallada del producto MAROON",
+        "price": "$280",
+        "description": "No tóxico para uñas Efecto Gel- Vegano - Cruelty Free - Genderless - Color: MAROON",
         "img": "./img/Maroon.jpg",
         "URLImg": "https://i.postimg.cc/6pGHn1ds/Maroon.jpg"
 
@@ -54,8 +54,8 @@
         "slug": "noah",
         "category": "clasicos",
         "title": "NOAH",
-        "price": 390,
-        "description": "Aca va la informacion detallada del producto NOAH",
+        "price": "$390",
+        "description": "No tóxico para uñas Efecto Gel- Vegano - Cruelty Free - Genderless - Color: NOAH",
         "img": "./img/Noah.jpg",
         "URLImg": "https://i.postimg.cc/VvVRbjvL/Noah.jpg"
 
@@ -66,8 +66,8 @@
         "slug": "coco",
         "category": "nuevos",
         "title": "COCO",
-        "price": 390,
-        "description": "Aca va la informacion detallada del producto COCO",
+        "price": "$390",
+        "description": "No tóxico para uñas Efecto Gel- Vegano - Cruelty Free - Genderless - Color: COCO",
         "img": "./img/Coco.jpg",
         "URLImg": "https://i.postimg.cc/qRGDgh2z/Coco.jpg"
 

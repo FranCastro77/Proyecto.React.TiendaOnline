@@ -27,20 +27,17 @@ const ItemListContainer = () => {
 
     useEffect(()=>{
 
-      if(categoryId){
-        getProducts(myProducts,2000).then(res => setProducts(res.filter(element => element.category === categoryId)))
-            .catch(err => console.log(`${err}: No hay articulos para mostrar.`));
+      
+
+    if(categoryId){
+        getProducts(myProducts,2000).then(res => setProducts(res.filter(product => product.category === categoryId)))
+            .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
     }else{
         getProducts(myProducts,2000).then(res => setProducts(res))
-            .catch(err => console.log(`${err}: No hay articulos para mostrar.`));
+            .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
     }
 }, [categoryId]);
       
-    //   getProducts(myProducts,2000).then((res)=>{
-    //     setProducts(res)
-    //   }).catch((err)=>console.log(err, ":Producto inexistente"))
-
-    // }, []);
 
 
   return (

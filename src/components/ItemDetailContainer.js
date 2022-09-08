@@ -42,7 +42,7 @@ const ItemDetailContainer = () => {
         <main className="justify-center">
   
   
-          {/* <h1 className="text-center font-sans text-4xl"> NUESTROS PRODUCTOS</h1> */}
+        
          
   
           <section className="flex-row">
@@ -58,7 +58,7 @@ const ItemDetailContainer = () => {
           
           
              
-            {/* <ItemDetail {...item}/> */}
+            
             
             
   
