@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
         
         if(products) {
         
-          resolve(products.find( element => element.id === idParams ) )
+          resolve(products.find( product => product.id === idParams ) )
         }else{
           reject("Error")
         }

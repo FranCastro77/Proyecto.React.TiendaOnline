@@ -1,8 +1,13 @@
 # OKNO - Ecommerce ficticio 
 
-............................
+Proyecto de e-commerce para la comercialización de esmaltes. El sitio contará con las secciones de categorias NUEVOS y CLASICOS, 
+como así tambien una sección donde podra ver todos los productos.
 
+Para darle estilos, se aplica Daysi.ui.
 
+Por el momento la seccion de Cart esta en construcción.
+
+Se integrará posteriormente un footer a find de que los interesados tengan acceso a los datos de contacto. 
 
 
 
