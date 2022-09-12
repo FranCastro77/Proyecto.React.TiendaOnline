@@ -11,6 +11,14 @@ Se integrará posteriormente un footer a find de que los interesados tengan acce
 
 
 
+
+
+COMENTARIOS DE BELEN
+El estado de ItemCount lo deberá guardar el ItemDetail en un estado propio (esto lo vieron en el levantamiento de estado, incluso pueden leer o buscar info mediante ese nombre)
+o lifting state up
+
+
+
 <!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

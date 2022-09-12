@@ -1,13 +1,13 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+// import ItemCount from './ItemCount'
 import {Link} from "react-router-dom";
 
 const Item = ({id, title, URLImg, price}) => {
 
-  const onAdd = (contador) => {
+  // const onAdd = (contador) => {
 
-    console.log ("El cliente ha seleccionado la siguiente cantidad:", contador, "del producto ", title)
-  }
+  //   console.log ("El cliente ha seleccionado la siguiente cantidad:", contador, "del producto ", title)
+  // }
 
 
   return (
@@ -19,7 +19,7 @@ const Item = ({id, title, URLImg, price}) => {
         </Link>
      
         <h2 className="font-sans text-2xl">{price}</h2>
-        <ItemCount stock={17} initial={1} onAdd ={onAdd}/>
+        {/* <ItemCount stock={17} initial={1} onAdd ={onAdd}/> */}
 
     </article>
   )

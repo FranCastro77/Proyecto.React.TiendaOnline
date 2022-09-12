@@ -14,7 +14,8 @@ const ItemCount = ({stock, initial, onAdd}) =>{
         if (contador > initial-1)
             setcontador(contador - 1)
         }
-
+    
+        
     return(
         <>
             <div>
@@ -24,6 +25,7 @@ const ItemCount = ({stock, initial, onAdd}) =>{
             </div>
             
             <div><button disabled={contador === 0} onClick={()=>onAdd(contador)}>Agregar a Carrito</button></div>
+                
         
         </>
     );   

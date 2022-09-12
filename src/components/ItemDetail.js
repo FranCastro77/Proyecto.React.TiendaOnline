@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemCount from './ItemCount'
+import {Link} from 'react-router-dom';
 
 
 
@@ -8,15 +9,16 @@ const ItemDetail = ({id, title, URLImg, price, description}) => {
   
 
 
-    const onAdd = (contador) => {
+    const onAdd = (count) => {
 
-        console.log ("El cliente ha seleccionado la siguiente cantidad:", contador, "del producto ", title)
+        console.log ("El cliente ha seleccionado la siguiente cantidad:", count, "del producto ", title)
+        
       }
 
 
     return (
 
-    <>
+    
   
 
     <article className="card w-96 bg-base-100 shadow-xl text-center mt-20 ">
@@ -25,12 +27,12 @@ const ItemDetail = ({id, title, URLImg, price, description}) => {
         <img className='imgItem' src={URLImg} alt=""/>
         <h2>{description}</h2>
         <h3>{price}</h3>
-        <ItemCount stock={17} initial={1} onAdd ={onAdd}/>
+     
+          <Link to={'/Cart'}><button>FINALIZAR LA COMPRA</button></Link>:  
+          <ItemCount stock={17} initial={1} onAdd ={onAdd}/>
+       
     </article>
       
-      
-       
-    </>
 
   );
 };
