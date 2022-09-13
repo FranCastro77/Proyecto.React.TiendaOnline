@@ -55,9 +55,10 @@ const ItemDetailContainer = () => {
 
           <h3>LISTA DE PRODUCTOS</h3>{items}
 
-          { item ? <ItemDetail {...item} /> : <p>Cargando...</p> }
+          
+          { item ? <ItemDetail item = {item} /> : <p>Cargando...</p> }
 
-
+          
           {/* { Object.entries(item).length === 0 ?
                 <div>
                   <h3>Obteniendo mas datos de tu producto...</h3>

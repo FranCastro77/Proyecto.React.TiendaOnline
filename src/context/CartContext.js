@@ -8,22 +8,36 @@ export const useCart = () => {
 
 export function CartProvider ({children}) {
 
-  const [items, setItems] = useState ([]);
+  const [cart, setCart] = useState ([]);
+
+  let copia = [...cart]
+
+  console.log("copia", [...copia, 1])
+  
+  console.log("carrito original", cart)
+
+  
+
+  function isInCart (itemId){
+    return cart.find((product) => product.id === itemId);
+
+  }
 
   function addItem (item, quantity) {
     console.log ({...item, quantity})
 
     if (isInCart(item.id)){
       console.log("este item ya esta agregado al carro")
-      let aux = items;
+      let aux = {...cart};
       console.log(aux)
+      
       let itemIndex = aux.findIndex((product) => product.id === item.id);
       console.log(`El index del producto es ${itemIndex}`)
       aux[itemIndex].quantity += quantity;
-      setItems([...aux])
+      setCart([...aux])
     }else{
       console.log(`este artitulo no se registra previamenten en el carro`)
-      setItems([...items, {...item, quantity}]);
+      setCart([...cart, {...item, quantity}]);
     }
 
   }
@@ -33,16 +47,11 @@ export function CartProvider ({children}) {
   // }
 
   function clear(){
-    setItems([]);
-  }
-
-  function isInCart (itemId){
-    return items.find((product) => product.id === itemId);
-
+    setCart([]);
   }
 
   return (
-      <CartContext.Provider value ={{addItem, clear, items}}>
+      <CartContext.Provider value ={{addItem, clear, cart}}>
           {children}
       </CartContext.Provider>
   )
