@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import myProducts from "../components/myProducts.json";
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import { useCart } from '../context/CartContext';
+// import { useCart } from '../context/CartContext';
 // import Item from './Item';
 
 
@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
 
   const {id} = useParams();
 
-  const {items, addItem} = useCart ()
+  // const {items, addItem} = useCart ()
 
   const [item, setItem] = useState({});
 
@@ -51,9 +51,9 @@ const ItemDetailContainer = () => {
   
           <section className="flex-row">
 
-          <h3>LISTA DE PRODUCTOS AGREGADOS</h3>{addItem}
+          {/* <h3>LISTA DE PRODUCTOS AGREGADOS</h3>{addItem}
 
-          <h3>LISTA DE PRODUCTOS</h3>{items}
+          <h3>LISTA DE PRODUCTOS</h3>{items} */}
 
           
           { item ? <ItemDetail item = {item} /> : <p>Cargando...</p> }

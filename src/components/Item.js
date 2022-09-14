@@ -18,7 +18,7 @@ const Item = ({id, title, URLImg, price}) => {
         <img src={URLImg} alt=""/>
         </Link>
      
-        <h2 className="font-sans text-2xl">{price}</h2>
+        <h2 className="font-sans text-2xl">Precio: $ {price}</h2>
         {/* <ItemCount stock={17} initial={1} onAdd ={onAdd}/> */}
 
     </article>

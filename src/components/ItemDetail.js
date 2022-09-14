@@ -41,10 +41,12 @@ const ItemDetail = ({item}) => {
 
     <article className="card w-96 bg-base-100 shadow-xl text-center mt-20 ">
 
+        
+        
         <h1>{item.title} - {item.id}</h1>
         <img className='imgItem' src={item.URLImg} alt=""/>
         <h2>{item.description}</h2>
-        <h3> Precio ${item.price}</h3>
+        <h3> Precio: $ {item.price}</h3>
         {
         quantity ? (
           
