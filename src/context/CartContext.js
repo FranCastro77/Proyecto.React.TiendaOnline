@@ -43,15 +43,14 @@ export function CartProvider ({children}) {
 
   }
 
-  function removeItem (item, quantity){
-    let auxcopia = [...cart];
-    console.log(auxcopia)
-
-    let removeIndex = auxcopia.filter((product) => product.id !== item.id);
-    console.log(`El index del producto eliminado es ${removeIndex}`)
-    auxcopia[removeIndex].quantity -= quantity;
-    setCart([...auxcopia])
-  }
+  function removeItem (itemId){
+    const newCart = [...cart];
+    const cartFilter = newCart.filter(item =>{
+        return item.id !== itemId;
+    });
+    setCart(cartFilter);
+    console.log(cartFilter)
+    }
 
   function clear(){
     setCart([]);
