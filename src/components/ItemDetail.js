@@ -10,7 +10,7 @@ const ItemDetail = ({item}) => {
 
     const [quantity, setQuantity] = useState (0)
 
-    console.log(quantity)
+    // console.log(quantity)
 
     const {addItem} = useCart ()
 
@@ -50,7 +50,7 @@ const ItemDetail = ({item}) => {
         }
 
     </article>
-    // <button onClick={onAdd}>Ir al Carrito</button>
+    
 
   );
 };

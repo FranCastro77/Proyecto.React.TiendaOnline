@@ -4,11 +4,7 @@ import {Link} from "react-router-dom";
 
 const Item = ({id, title, URLImg, price}) => {
 
-  // const onAdd = (contador) => {
-
-  //   console.log ("El cliente ha seleccionado la siguiente cantidad:", contador, "del producto ", title)
-  // }
-
+  
 
   return (
     <article className="card w-96 bg-base-100 shadow-xl text-center mt-20 ">
@@ -19,7 +15,7 @@ const Item = ({id, title, URLImg, price}) => {
         </Link>
      
         <h2 className="font-sans text-2xl">Precio: $ {price}</h2>
-        {/* <ItemCount stock={17} initial={1} onAdd ={onAdd}/> */}
+
 
     </article>
   )

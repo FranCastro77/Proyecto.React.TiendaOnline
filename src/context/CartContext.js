@@ -17,7 +17,6 @@ export function CartProvider ({children}) {
   // console.log("carrito original", cart)
 
   
-
   function isInCart (itemId){
     return cart.find((product) => product.id === itemId);
 
@@ -28,7 +27,6 @@ export function CartProvider ({children}) {
 
     if (isInCart(item.id)){
       console.log("este item ya esta agregado al carro")
-      // let aux = {...cart};
       let aux = [...cart];
       console.log(aux)
       
@@ -44,8 +42,8 @@ export function CartProvider ({children}) {
   }
 
   function removeItem (itemId){
-    const newCart = [...cart];
-    const cartFilter = newCart.filter(item =>{
+    const prevCart = [...setCart];
+    const cartFilter = prevCart.filter(item =>{
         return item.id !== itemId;
     });
     setCart(cartFilter);
