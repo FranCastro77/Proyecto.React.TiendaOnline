@@ -9,9 +9,9 @@ import { useCart } from '../context/CartContext';
 const CartView = ({id, title, price}) => {
 
   const {cart, clear} = useCart ();
-  const eventHandler = (id) =>
+  const eventHandler = () =>
 
-     clear(id)
+     clear()
      console.log(cart); 
 
 
