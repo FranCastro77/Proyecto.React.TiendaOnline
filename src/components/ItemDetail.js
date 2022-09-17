@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemCount from './ItemCount'
 import {Link} from 'react-router-dom';
-import { useCart } from '../context/CartContext';
+import { useCartContext } from '../context/CartContext';
 import { useState } from 'react';
 
 
@@ -13,7 +13,7 @@ const ItemDetail = ({item}) => {
 
     // console.log(quantity)
 
-    const {addItem} = useCart ()
+    const {addItem} = useCartContext ()
 
     function onAdd (quantity) {
 
@@ -46,8 +46,10 @@ const ItemDetail = ({item}) => {
 
         ):
 
-        (<ItemCount stock={17} initial={1} onAdd ={onAdd}/>)
+        // (<ItemCount stock={17} initial={1} onAdd ={onAdd}/>)
+        (<ItemCount stock={item.stock} initial={1} onAdd ={onAdd}/>)
 
+        
         }
 
     </article>

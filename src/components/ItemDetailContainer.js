@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import {getFirestore, doc, getDoc } from 'firebase/firestore';
+import Spinner from './Spinner';
 
 
 // ---------Recordar pasos para trabajar con Firebase ---------------
@@ -20,6 +21,8 @@ const ItemDetailContainer = () => {
   const {id} = useParams();
 
   const [item, setItem] = useState();
+
+  // const [loading, setLoading] = useState(true)
 
     // const getItem = (products, time, idParams) => new Promise ((resolve, reject) => {
       
@@ -48,6 +51,8 @@ const ItemDetailContainer = () => {
       // getItem(myProducts,2000, id).then((res)=>{
       //   setItem(res)
       // }).catch((err)=>console.log(err, ":Producto inexistente"))
+      
+      // setLoading(false)
 
     }, [id]);
 
@@ -66,7 +71,15 @@ const ItemDetailContainer = () => {
 
           <section className="flex-row">
 
-          { item ? <ItemDetail item = {item} /> : <p>Cargando...</p> }
+          {     
+            item ? <ItemDetail item = {item} />:<Spinner/> 
+          } 
+              
+
+
+           
+
+          {/* { item ? <ItemDetail item = {item} /> : <p>Cargando...</p> } */}
 
           </section>
   

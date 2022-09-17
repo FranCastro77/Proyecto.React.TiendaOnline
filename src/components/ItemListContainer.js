@@ -3,6 +3,7 @@ import ItemList from './ItemList'
 // import myProducts from "../components/myProducts.json";
 import { useParams } from 'react-router-dom';
 import {getFirestore, collection, getDocs, query, where } from 'firebase/firestore'; 
+// import Spinner from './Spinner';
 
 
 
@@ -11,6 +12,8 @@ const ItemListContainer = () => {
   const {categoryId} = useParams();
 
   const [products, setProducts] = useState([]);
+
+  // const [loading, setLoading] = useState(true)
 
     // const getProducts = (data, time) => new Promise((resolve, reject) =>{
 
@@ -58,6 +61,8 @@ const ItemListContainer = () => {
     //     getProducts(myProducts,2000).then(res => setProducts(res))
     //         .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
     // }
+    // setLoading(false)
+
 }, [categoryId]);
     
 
@@ -80,6 +85,14 @@ const ItemListContainer = () => {
        
 
         <section className="flex-row">
+
+
+          {/* {
+            loading ?
+             <ItemList products={products} />:<Spinner/> 
+          } */}
+
+
           
           <ItemList products={products}/>
 
