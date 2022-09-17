@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import ItemList from './ItemList'
-import myProducts from "../components/myProducts.json";
+// import myProducts from "../components/myProducts.json";
 import { useParams } from 'react-router-dom';
+import {getFirestore, collection, getDocs, query, where } from 'firebase/firestore'; 
 
 
 
@@ -11,33 +12,62 @@ const ItemListContainer = () => {
 
   const [products, setProducts] = useState([]);
 
-    const getProducts = (data, time) => new Promise((resolve, reject) =>{
+    // const getProducts = (data, time) => new Promise((resolve, reject) =>{
 
-      setTimeout(() => {
+    //   setTimeout(() => {
           
         
-        if(data){
-            resolve(data)
-        }else{
-          reject("Error")
-        }
+    //     if(data){
+    //         resolve(data)
+    //     }else{
+    //       reject("Error")
+    //     }
 
-      }, time);
-    })
+    //   }, time);
+    // })
 
     useEffect(()=>{
 
+    const queryDb = getFirestore();
+    const queryCollection = collection (queryDb, 'products');
+    // const queryFilter = query(queryCollection, where('categoria', '==', categoryId))
+    // getDocs(queryFilter)
+    
+    
+    
+    if(categoryId){
+      const queryFilter = query(queryCollection, where('category', '==', categoryId))
+      getDocs(queryFilter)
+          .then(res => setProducts(res.docs.map(product => ({id: product.id, ...product.data()}))))
+          .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
+    }else{
+      getDocs(queryCollection)
+          .then(res => setProducts(res.docs.map(product => ({id: product.id, ...product.data()}))))
+          .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
+    }  
+
       
 
-    if(categoryId){
-        getProducts(myProducts,2000).then(res => setProducts(res.filter(product => product.category === categoryId)))
-            .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
-    }else{
-        getProducts(myProducts,2000).then(res => setProducts(res))
-            .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
-    }
+
+
+
+    // if(categoryId){
+    //     getProducts(myProducts,2000).then(res => setProducts(res.filter(product => product.category === categoryId)))
+    //         .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
+    // }else{
+    //     getProducts(myProducts,2000).then(res => setProducts(res))
+    //         .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
+    // }
 }, [categoryId]);
-      
+    
+
+    // useEffect (() =>{
+    //   const queryDb = getFirestore();
+    //   const queryCollection = collection (queryDb, 'products');
+    //   getDocs(queryCollection)
+    //     .then(res => console.log(res.docs.map(product => ({id: product.id, ...product.data()}))))
+    // }, [])
+
 
 
   return (
