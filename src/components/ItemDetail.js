@@ -11,8 +11,6 @@ const ItemDetail = ({item}) => {
 
     const [quantity, setQuantity] = useState (0)
 
-    // console.log(quantity)
-
     const {addItem} = useCartContext ()
 
     function onAdd (quantity) {
@@ -61,7 +59,6 @@ const ItemDetail = ({item}) => {
         <div>
           <ItemCount stock={item.stock} initial={1} onAdd ={onAdd}/>
         </div>  
-        // (<ItemCount stock={17} initial={1} onAdd ={onAdd}/>)
         
 
         

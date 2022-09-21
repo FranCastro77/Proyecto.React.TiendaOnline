@@ -1,5 +1,4 @@
 import React from 'react'
-// import Emptycart from "../assets/images/Empty_cart.jpg"
 import { NavLink } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext';
 import ItemCart from './ItemCart';

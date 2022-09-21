@@ -9,7 +9,6 @@ const ItemCart = ({product}) => {
 
         <div className='justify-center py-12 pl-12'>
             <p className='italic font-semibold underline pb-3'> {product.title}</p>
-            {/* <p> Producto: {product.title} - {product.id}</p> */}
             <p> Cantidad: {product.quantity}</p>
             <p> Precio: $ {product.price}</p>
             <p className='font-bold py-3'> Subtotal: $ {product.quantity * product.price}</p>

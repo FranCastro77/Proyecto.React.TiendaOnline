@@ -2,10 +2,6 @@ import React from 'react'
 import Item from './Item'
 import Spinner from './Spinner';
 
-
-
-
-
 const ItemList = ({products}) => {
 
  
@@ -24,10 +20,6 @@ const ItemList = ({products}) => {
         <Spinner/>
 
         }
-
-        {/* {products.length ?  products.map((product) => <Item key={product.id} {...product} />)  : <h3 className='text-end font-sans text-2xl'>Estamos preparando los colores...</h3>} */}
-       
-        
 
     </div>
       
