@@ -22,7 +22,27 @@ export function CartProvider ({children}) {
 
   }
 
-  function addItem (item, quantity) {
+  // function addItem (item, quantity) {
+  //   console.log ({...item, quantity})
+
+  //   if (isInCart(item.id)){
+  //     console.log("este item ya esta agregado al carro")
+  //     let aux = [...cart];
+  //     console.log(aux)
+      
+  //     let itemIndex = aux.findIndex((product) => product.id === item.id);
+  //     console.log(`El index del producto es ${itemIndex}`)
+  //     aux[itemIndex].quantity += quantity;
+  //     setCart([...aux])
+  //   }else{
+  //     console.log(`este artitulo no se registra previamenten en el carro`)
+  //     setCart([...cart, {...item, quantity}]);
+  //   }
+
+  // }
+
+
+   function addItem (item, quantity) {
     console.log ({...item, quantity})
 
     if (isInCart(item.id)){
@@ -40,6 +60,9 @@ export function CartProvider ({children}) {
     }
 
   }
+  
+
+
 
   function removeItem (itemId){
     const newCart = [...cart];

@@ -7,30 +7,42 @@ import ItemCart from './ItemCart';
 
 
 const CartView = () =>{
-  const {cart, totalPrice} = useCartContext()
+  const {cart, totalPrice, clearCart} = useCartContext()
   
   if (cart.length === 0){
     return (
 
-        <>
+        <div className='text-center flex-col mt-24'>
 
-          <p>Aun no tenes elementos en tu carrito</p>
-          <NavLink className= "btn btn-active btn-ghost" to={'/Item'}>COMPRAR</NavLink>
+          <p className='font-bold'>Aun no tenes elementos en tu carrito</p>
+          <NavLink className= "mt-32 btn btn-active btn-ghost" to={'/Item'}>COMPRAR</NavLink>
 
-        </>  
+        </div>
+
+          
+        
     );   
 
   }
 
   return (
 
-    <div>  
+    <div className='flex-row'>  
+         
+         <div className='flex flex-wrap'>  
           {
-            cart.map(product => <ItemCart key={product.id} product={product} />)
+              cart.map(product => 
+              <ItemCart key={product.id} product={product} />)
           }
-          <p>
-            Total: {totalPrice()}
+          </div>
+          
+          <p className='self-end pb-6 py-6 text-2xl text-center'>
+            Total: ${totalPrice()}
           </p>
+
+          <div className='text-center'>
+            <button className='btn' onClick={clearCart}>VACIAR CARRITO</button>
+          </div>
 
     </div>
 

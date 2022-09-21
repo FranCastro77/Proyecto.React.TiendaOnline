@@ -4,15 +4,16 @@ import { useCartContext } from '../context/CartContext'
 const ItemCart = ({product}) => {
   const {removeItem} = useCartContext (); 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl text-center mt-20 ">
-        <img className='imgItem' src={product.URLImg} alt=""/>
+    <div className="flex">
+        <img className='imgItem max-h-60 ml-10' src={product.URLImg} alt=""/>
 
-        <div>
-            <p> Producto: {product.title} - {product.id}</p>
+        <div className='justify-center py-12 pl-12'>
+            <p className='italic font-semibold underline pb-3'> {product.title}</p>
+            {/* <p> Producto: {product.title} - {product.id}</p> */}
             <p> Cantidad: {product.quantity}</p>
             <p> Precio: $ {product.price}</p>
-            <p> Subtotal: $ {product.quantity * product.price}</p>
-            <button onClick={() => removeItem(product.id)}>ELIMINAR</button>
+            <p className='font-bold py-3'> Subtotal: $ {product.quantity * product.price}</p>
+            <button className='btn' onClick={() => removeItem(product.id)}>ELIMINAR</button>
         </div>
     
     </div>

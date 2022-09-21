@@ -11,7 +11,7 @@ const CartWidget = () => {
   const {totalProducts} = useCartContext();
 
   return (
-        <div className="ml-5">
+        <div className="ml-5 flex font-bold text-red-600">
           <img src={Cartpicture} alt="" />
           <span>{totalProducts() || ''}</span>
 

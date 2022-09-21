@@ -27,27 +27,42 @@ const ItemDetail = ({item}) => {
 
     return (
 
-    <article className="card w-96 bg-base-100 shadow-xl text-center mt-20 ">
+   
+    
+    <article className='flex-col ml-60'>
 
-        <h1>{item.title} - {item.id}</h1>
-        <img className='imgItem' src={item.URLImg} alt=""/>
-        <h2>{item.description}</h2>
-        <h3> Precio: $ {item.price}</h3>
+      <div className='flex row'>
+
+          <h1 className=' mx-12 italic font-semibold mt-40'>{item.title} - {item.id}</h1>
+
+          <img className='imgItem max-h-96 mt-30' src={item.URLImg} alt=""/>
+      
+          <div>
+            <h2 className='flex-row mt-40 ml-5'>{item.description}</h2>
+            <h2 className='ml-5 font-semibold'> Precio: $ {item.price}</h2>
+          </div>
+          
+      </div>
+        
         {
         quantity ? (
 
-          <div>
-
-            <Link to={'/Cart'}>
-              <button>Ir al Carrito</button>
-            </Link>
-
-          </div>
+        <div className='mt-16 ml-96'>
+          <Link to={'/Cart'}>
+            <button className='btn btn-success'>Ir al Carrito</button>
+          </Link>
+          <Link to={'/Item'}>
+            <button className='ml-10 btn btn-success'>Seguir comprando</button>
+          </Link>
+        </div>
 
         ):
-
+        
+        <div>
+          <ItemCount stock={item.stock} initial={1} onAdd ={onAdd}/>
+        </div>  
         // (<ItemCount stock={17} initial={1} onAdd ={onAdd}/>)
-        (<ItemCount stock={item.stock} initial={1} onAdd ={onAdd}/>)
+        
 
         
         }
