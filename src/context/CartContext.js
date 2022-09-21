@@ -63,7 +63,6 @@ export function CartProvider ({children}) {
   
 
 
-
   function removeItem (itemId){
     const newCart = [...cart];
     const cartFilter = newCart.filter(product =>{
@@ -92,9 +91,6 @@ export function CartProvider ({children}) {
     return cantidad
 
   }
-
-
-
 
 
   return (
