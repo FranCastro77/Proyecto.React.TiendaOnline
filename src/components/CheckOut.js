@@ -2,6 +2,8 @@ import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/fire
 import React, {useState} from 'react'
 import { useCartContext } from '../context/CartContext';
 
+
+
 const CheckOut = () => {
 
   const {cart, totalPrice, clearCart} = useCartContext()
@@ -30,23 +32,24 @@ const CheckOut = () => {
     
     const order = {
 
-     buyer:{
 
-      nombre: datos.nombre,
-      email: datos.email,
-      telefono: datos.telefono
+      buyer:datos,  
 
-     }, 
+    //  buyer:{
 
-      items: cart.map(product => ({id: product.id, title: product.title, price: product.price, cantidad: product.quantity})),
+    //   nombre: datos.nombre,
+    //   email: datos.email,
+    //   telefono: datos.telefono
+
+    //  }, 
+
+      // items: cart.map(product => ({id: product.id, title: product.title, price: product.price, cantidad: product.quantity})),
+      items: cart,
       total: totalPrice(),
       date: serverTimestamp()
 
     }
-
-   
-
-    // console.log(datos.nombre + " " + datos.email + " " + datos.telefono)
+    
 
     const db = getFirestore();
     const ordersCollection = collection(db, 'orders');
@@ -56,10 +59,13 @@ const CheckOut = () => {
 
 
   }
-  
+
+
+
   return (
 
     <>
+    
     
     <h1 className="text-center">Por favor complete sus datos</h1>
 
@@ -121,9 +127,53 @@ const CheckOut = () => {
         </div>
 
 
-    </form>
+    </form> 
+
+
+      <div>
+
+          <h1>MUCHAS GRACIAS POR TU COMPRA</h1>
+          <br></br>
+            <p> {datos.nombre}, con fecha {serverTimestamp} has generado la Orden de Compra    , por un total a pagar de $ {totalPrice()} </p>
+          <br></br>
+            <p> Nos contactaremos en breve contigo al correo {datos.email} para continuar con el proceso. </p>
+
+
+
+      </div>
+    {/* {
+        {totalPrice} > 0  (
+
+        <div className="alert alert-success shadow-lg">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <span>Your purchase has been confirmed!</span>
+            </div>
+          </div>
+
+        )
+        
+        
+          
+        
+        } */}
+
+     
+
+          
+
+        
+
+    
+        
+        
+        
+     
+        
     
     </>
+
+    
     
   )
 }

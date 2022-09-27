@@ -79,7 +79,7 @@ export function CartProvider ({children}) {
   function totalPrice (){
     let total = 0;
     cart.map((i) => total += i.price * i.quantity);
-    console.log(total)
+    // console.log(total)
     return total
     
   }
