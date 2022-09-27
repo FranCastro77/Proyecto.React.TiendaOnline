@@ -1,3 +1,4 @@
+// import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext';
@@ -7,7 +8,32 @@ import ItemCart from './ItemCart';
 
 const CartView = () =>{
   const {cart, totalPrice, clearCart} = useCartContext()
+
   
+  // const order = {
+
+  //   buyer: {
+  //     name: 'Francisco Castro',
+  //     phone: '1133865434',
+  //     email: 'franciscocast@gmail.com'
+  //   },
+
+  //   items: cart.map(product => ({id: product.id, title: product.title, price: product.price, cantidad: product.quantity})),
+  //   total: totalPrice(),
+
+  // }
+
+  // const handleOrder = () => {
+
+  //   const db = getFirestore();
+  //   const ordersCollection = collection(db, 'orders');
+  //   addDoc(ordersCollection, order)
+  //   .then(({id}) => console.log(id))
+
+  // }
+
+
+
   if (cart.length === 0){
     return (
 
@@ -42,6 +68,14 @@ const CartView = () =>{
           <div className='text-center'>
             <button className='btn' onClick={clearCart}>VACIAR CARRITO</button>
           </div>
+
+
+          <NavLink className='text-center mt-10' to={'/CheckOut'}>
+            {/* <button className='btn btn-success' onClick={handleOrder}> Confirmar y Emitir Compra </button> */}
+            <button className='btn btn-success'> Confirmar y Emitir Compra </button>
+          </NavLink>  
+
+         
 
     </div>
 
