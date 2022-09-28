@@ -47,17 +47,18 @@ const CheckOut = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, 'orders');
     addDoc(ordersCollection, order)
+      // .then(({toDate}) => console.log(toDate))
     
 
-      .then(({id}) => Swal.fire({
+      .then(({id,date}) => Swal.fire({
             title: 'GRACIAS POR TU COMPRA!',
-            text:  datos.nombre.toUpperCase() + ', tu numero de Orden es ' + id + ' y fue creada el'+ serverTimestamp.date + 'por un monto total de $' + totalPrice()+'.--' 
+            text:  datos.nombre.toUpperCase() + ', tu numero de Orden es ' + id + ' y fue creada el'+ date + 'por un monto total de $' + totalPrice()+'.--' 
             + 'En breve, recibiras un correo al email ' + datos.email + ',para continuar con el proceso.',
             icon: 'success'
       }))
       clearCart()
-   
 
+      
 
 
   }
@@ -83,7 +84,7 @@ const CheckOut = () => {
             <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" 
                    id="inline-full-name" 
                    type="text"
-                   name="nombre"
+                   name="nombre" required
                    onChange={handleInputChange}>
             </input>
           </div>
@@ -100,7 +101,7 @@ const CheckOut = () => {
             <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" 
                    id="inline-full-name" 
                    type="email"
-                   name="email"
+                   name="email" required
                    onChange={handleInputChange}>
             </input>
           </div>
@@ -116,7 +117,7 @@ const CheckOut = () => {
             <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" 
                    id="inline-full-name" 
                    type="tel"
-                   name="telefono"
+                   name="telefono" required
                    onChange={handleInputChange}>
               
             </input>
