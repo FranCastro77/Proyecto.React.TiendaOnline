@@ -1,4 +1,4 @@
-import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, getFirestore} from 'firebase/firestore';
 import React, {useState} from 'react'
 import { useCartContext } from '../context/CartContext';
 import Swal from 'sweetalert2'
@@ -8,8 +8,7 @@ import Swal from 'sweetalert2'
 const CheckOut = () => {
 
   const {cart, totalPrice, clearCart} = useCartContext()
-  
-  
+
   const [datos, setDatos] = useState({
 
       nombre: '',
@@ -17,10 +16,6 @@ const CheckOut = () => {
       telefono: ''
 
   })
-
-  // const date = serverTimestamp()
-  
-  
   
    const handleInputChange = (event) =>{
 
@@ -39,14 +34,9 @@ const CheckOut = () => {
     
     const order = {
 
-
       buyer:datos,  
-
-      
       items: cart,
       total: totalPrice(),
-      // date: serverTimestamp()
-      // date: date
       date: theDate
 
     }
@@ -55,7 +45,6 @@ const CheckOut = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, 'orders');
     addDoc(ordersCollection, order)
-      // .then(({id}) => console.log(order.date))
 
     
 
@@ -66,11 +55,7 @@ const CheckOut = () => {
       }))
       clearCart()
 
-      
-
-
   }
-
 
 
   return (
@@ -93,6 +78,7 @@ const CheckOut = () => {
                    id="inline-full-name" 
                    type="text"
                    name="nombre" required
+                   placeholder='Apellido Nombre'
                    onChange={handleInputChange}>
             </input>
           </div>
@@ -110,6 +96,7 @@ const CheckOut = () => {
                    id="inline-full-name" 
                    type="email"
                    name="email" required
+                   placeholder='xxxxxx@xxx.xxx'
                    onChange={handleInputChange}>
             </input>
           </div>
@@ -126,6 +113,7 @@ const CheckOut = () => {
                    id="inline-full-name" 
                    type="tel"
                    name="telefono" required
+                   placeholder='xxxx xxxx'
                    onChange={handleInputChange}>
               
             </input>
