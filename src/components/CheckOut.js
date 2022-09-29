@@ -17,8 +17,12 @@ const CheckOut = () => {
       telefono: ''
 
   })
+
+  // const date = serverTimestamp()
   
-  const handleInputChange = (event) =>{
+  
+  
+   const handleInputChange = (event) =>{
 
     setDatos({
 
@@ -27,6 +31,8 @@ const CheckOut = () => {
 
     })
   }
+
+  const theDate = new Date().toISOString().slice(0,10);
 
   const userData = (event) =>{
     event.preventDefault ();
@@ -39,7 +45,9 @@ const CheckOut = () => {
       
       items: cart,
       total: totalPrice(),
-      date: serverTimestamp()
+      // date: serverTimestamp()
+      // date: date
+      date: theDate
 
     }
     
@@ -47,13 +55,13 @@ const CheckOut = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, 'orders');
     addDoc(ordersCollection, order)
-      // .then(({toDate}) => console.log(toDate))
+      // .then(({id}) => console.log(order.date))
+
     
 
-      .then(({id,date}) => Swal.fire({
-            title: 'GRACIAS POR TU COMPRA!',
-            text:  datos.nombre.toUpperCase() + ', tu numero de Orden es ' + id + ' y fue creada el'+ date + 'por un monto total de $' + totalPrice()+'.--' 
-            + 'En breve, recibiras un correo al email ' + datos.email + ',para continuar con el proceso.',
+      .then(({id}) => Swal.fire({
+            title: 'GRACIAS POR TU COMPRA!'+ datos.nombre.toUpperCase(),
+            text: 'Tu numero de Orden es ' + id + ' y fue creada el ' + theDate + ' , por un total de $ ' + totalPrice() + '. -- En breve recibiras un correo al email ' + datos.email + ',para continuar con el proceso.',
             icon: 'success'
       }))
       clearCart()
