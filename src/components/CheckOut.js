@@ -49,11 +49,12 @@ const CheckOut = () => {
     
 
       .then(({id}) => Swal.fire({
-            title: 'GRACIAS POR TU COMPRA!'+ datos.nombre.toUpperCase(),
-            text: 'Tu numero de Orden es ' + id + ' y fue creada el ' + theDate + ' , por un total de $ ' + totalPrice() + '. -- En breve recibiras un correo al email ' + datos.email + ',para continuar con el proceso.',
+            title: 'GRACIAS POR TU COMPRA '+ datos.nombre.toUpperCase() + "!",
+            text: 'Tu numero de Orden es  ' + id  + '  y fue creada el  ' + theDate + '  , por un total de $  ' +  totalPrice()  + ' . -- En breve recibiras un correo al email ' + datos.email + ',para continuar con el proceso.',
             icon: 'success'
       }))
       clearCart()
+      setDatos({nombre:"", email:"", telefono:""})
 
   }
 
@@ -78,6 +79,7 @@ const CheckOut = () => {
                    id="inline-full-name" 
                    type="text"
                    name="nombre" required
+                   value={datos.nombre}
                    placeholder='Apellido Nombre'
                    onChange={handleInputChange}>
             </input>
@@ -96,6 +98,7 @@ const CheckOut = () => {
                    id="inline-full-name" 
                    type="email"
                    name="email" required
+                   value={datos.email}
                    placeholder='xxxxxx@xxx.xxx'
                    onChange={handleInputChange}>
             </input>
@@ -113,6 +116,7 @@ const CheckOut = () => {
                    id="inline-full-name" 
                    type="tel"
                    name="telefono" required
+                   value={datos.telefono}
                    placeholder='xxxx xxxx'
                    onChange={handleInputChange}>
               
