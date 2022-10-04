@@ -1,4 +1,4 @@
-import { addDoc, collection, getFirestore} from 'firebase/firestore';
+import { addDoc, collection, getFirestore, updateDoc, doc} from 'firebase/firestore';
 import React, {useState} from 'react'
 import { useCartContext } from '../context/CartContext';
 import Swal from 'sweetalert2'
@@ -57,6 +57,19 @@ const CheckOut = () => {
       clearCart()
       setDatos({nombre:"", email:"", telefono:""})
 
+
+    const updateStock = (cart) => {
+          cart.forEach(e=>{
+          const {id, stock, quantity} = e
+          console.log(quantity)
+          let newStock = stock - quantity
+          const product = doc(db, "products", id)
+          updateDoc(product,{stock:newStock})
+        }) 
+
+    }  
+
+    updateStock(cart)
   }
 
 
