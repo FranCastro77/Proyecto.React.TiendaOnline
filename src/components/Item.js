@@ -6,7 +6,7 @@ const Item = ({id, title, URLImg, price}) => {
   
 
   return (
-    <article className="card w-96 bg-base-100 shadow-xl text-center mt-20 ">
+    <article className="card w-80 bg-base-100 shadow-xl text-center mt-19 pt-8 ">
         
         <h1 className="font-sans text-2xl">{title}</h1>
         <Link to= {`/Item/${id}`} key={id}>

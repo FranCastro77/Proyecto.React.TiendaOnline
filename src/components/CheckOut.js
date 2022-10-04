@@ -50,7 +50,8 @@ const CheckOut = () => {
 
       .then(({id}) => Swal.fire({
             title: 'GRACIAS POR TU COMPRA '+ datos.nombre.toUpperCase() + "!",
-            text: 'Tu numero de Orden es  ' + id  + '  y fue creada el  ' + theDate + '  , por un total de $  ' +  totalPrice()  + ' . -- En breve recibiras un correo al email ' + datos.email + ',para continuar con el proceso.',
+            
+            text: 'Tu numero de Orden es  ' + id  + '  y fue creada el  ' + theDate + '  , por un total de $  ' +  totalPrice()  + ' . -- En breve recibiras un correo al email  ' + datos.email + ' ,  para continuar con el proceso.',
             icon: 'success'
       }))
       clearCart()
@@ -66,7 +67,7 @@ const CheckOut = () => {
     
     <h1 className="text-center">Por favor complete sus datos</h1>
 
-    <form className="w-full max-w-sm " onSubmit={userData}>
+    <form className="w-full max-w-sm ml-96 pt-20" onSubmit={userData}>
 
       <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
@@ -125,7 +126,7 @@ const CheckOut = () => {
       </div>
 
         
-        <div className='col-md-3'>
+        <div className='col-md-3 ml-60'>
             <button className='btn text-center mt-5' type="submit" disabled={totalPrice() === 0}>Procesar Orden</button>
         </div>
 

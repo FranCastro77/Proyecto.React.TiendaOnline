@@ -7,8 +7,8 @@ import CartWidget from './CartWidget';
 const NavBar = () => {
   return (
     <header>
-      <nav className="mb-10">
-        <div className="align-center inline-flex gap-x-5 text-align ml-20 mt-10">
+      <nav className="mb-8">
+        <div className="align-center inline-flex gap-x-5 text-align ml-20 mt-5 pr-5">
           <NavLink to={'/'}>
             <img src={logo} alt="" />
           </NavLink>

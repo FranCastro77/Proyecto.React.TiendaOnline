@@ -27,13 +27,13 @@ const ItemDetail = ({item}) => {
 
    
     
-    <article className='flex-col ml-60'>
+    <article className='text-center flex-col ml-35'>
 
       <div className='flex row'>
 
           <h1 className=' mx-12 italic font-semibold mt-40'>{item.title} - {item.id}</h1>
 
-          <img className='imgItem max-h-96 mt-30' src={item.URLImg} alt=""/>
+          <img className='imgItem max-h-80 mt-30' src={item.URLImg} alt=""/>
       
           <div>
             <h2 className='flex-row mt-40 ml-5'>{item.description}</h2>

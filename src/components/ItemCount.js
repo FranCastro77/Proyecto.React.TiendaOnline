@@ -17,9 +17,9 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     
         
     return(
-        <div className='flex-col text-center mr-96'>
+        <div className='flex-col text-center mr-56'>
 
-            <div className='pt-5 -ml-36 mb-12'>
+            <div className='pt-4 -ml-36 mb-2'>
                 <button onClick={disminuirContador}className="btn text-center">-</button>
                 <span className='pl-5 pr-5'>{contador}</span>
                 <button onClick={agregarContador} className="btn tex-center">+</button>
