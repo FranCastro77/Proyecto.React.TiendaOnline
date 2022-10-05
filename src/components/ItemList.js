@@ -17,7 +17,7 @@ const ItemList = ({products}) => {
         
         
 
-        (<div className='flex-row justify-center'>
+        (<div className='col-span-2'>
           <Spinner/>
          </div>)
 
