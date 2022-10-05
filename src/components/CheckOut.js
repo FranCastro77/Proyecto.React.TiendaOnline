@@ -82,6 +82,8 @@ const CheckOut = () => {
 
     <form className=" text-center w-full max-w-sm ml-96 pt-20" onSubmit={userData}>
 
+      <div className='text-center'>
+
       <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
             <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
@@ -138,11 +140,10 @@ const CheckOut = () => {
           </div>
       </div>
 
-        
-        <div className='col-md-3 ml-60'>
+      </div>
+        <div className='col-md-3 ml-80'>
             <button className='btn text-center mt-5' type="submit" disabled={totalPrice() === 0}>Procesar Orden</button>
         </div>
-
 
     </form> 
 
