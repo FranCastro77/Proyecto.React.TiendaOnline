@@ -147,8 +147,6 @@ const CheckOut = () => {
 
     </form> 
 
-
-     
     </>
 
     

@@ -28,8 +28,6 @@ const ItemListContainer = () => {
           .catch(err => console.log(err, ": Disculpas. Esta categoria aún no existe."));
     }  
 
-
-
 }, [categoryId]);
     
 
@@ -38,18 +36,11 @@ const ItemListContainer = () => {
 
       <main className="justify-center mt-5">
 
-
         <h1 className="text-center font-sans text-4xl"> NUESTROS PRODUCTOS</h1>
        
-
         <section className="overflow-auto">
-
-          
           <ItemList products={products}/>
-
         </section>
-
-        
 
       </main>
         

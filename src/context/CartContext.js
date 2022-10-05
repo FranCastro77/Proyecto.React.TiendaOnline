@@ -15,48 +15,22 @@ export function CartProvider ({children}) {
     return cart.find((product) => product.id === itemId);
 
   }
-
-  //  function addItem (item, quantity) {
-  //   console.log ({...item, quantity})
-
-  //   if (isInCart(item.id)){
-  //     console.log("este item ya esta agregado al carro")
-  //     let aux = [...cart];
-  //     console.log(aux)
-      
-  //     let itemIndex = aux.findIndex((product) => product.id === item.id);
-  //     console.log(`El index del producto es ${itemIndex}`)
-  //     aux[itemIndex].quantity += quantity;
-  //     setCart([...aux])
-  //   }else{
-  //     console.log(`este artitulo no se registra previamenten en el carro`)
-  //     setCart([...cart, {...item, quantity}]);
-  //   }
-
-  // }
   
   function addItem (item, quantity) {
     console.log ({...item, quantity})
 
     if (isInCart(item.id)){
-      console.log("este item ya esta agregado al carro")
       let aux = [...cart];
-      console.log(aux)
       
       let itemIndex = aux.findIndex((product) => product.id === item.id);
-      console.log(`El index del producto es ${itemIndex}`)
-      
-      
+  
       const actualizar = aux[itemIndex].quantity += quantity;
-      // console.log(actualizar)
 
       console.log("original", cart)
       console.log("copia", actualizar)
 
-      // setCart([...actualizar])
       
     }else{
-      console.log(`este artitulo no se registra previamenten en el carro`)
       setCart([...cart, {...item, quantity}]);
     }
 
@@ -69,7 +43,6 @@ export function CartProvider ({children}) {
         return product.id !== itemId;
     });
     setCart(cartFilter);
-    console.log(cartFilter)
     }
 
   function clearCart(){
@@ -79,7 +52,6 @@ export function CartProvider ({children}) {
   function totalPrice (){
     let total = 0;
     cart.map((i) => total += i.price * i.quantity);
-    // console.log(total)
     return total
     
   }
@@ -87,7 +59,6 @@ export function CartProvider ({children}) {
   function totalProducts (){
     let cantidad = 0;
     cart.map((i) => cantidad += i.quantity)
-    console.log(cantidad)
     return cantidad
 
   }

@@ -46,7 +46,6 @@ const CartView = () =>{
 
           <div className='text-center'>
               <NavLink className='text-center mt-10' to={'/CheckOut'}>
-                {/* <button className='btn btn-success' onClick={handleOrder}> Confirmar y Emitir Compra </button> */}
                 <button className='btn btn-success mt-3'> Confirmar y Emitir Compra </button>
               </NavLink>  
           </div>

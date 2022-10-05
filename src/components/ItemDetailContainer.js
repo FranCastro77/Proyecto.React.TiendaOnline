@@ -37,8 +37,7 @@ const ItemDetailContainer = () => {
           {     
             item ? <ItemDetail item = {item} />:<Spinner/> 
           } 
-              
-
+          
           </section>
   
         </main>

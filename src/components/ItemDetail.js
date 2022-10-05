@@ -60,8 +60,6 @@ const ItemDetail = ({item}) => {
           <ItemCount stock={item.stock} initial={1} onAdd ={onAdd}/>
         </div>  
         
-
-        
         }
 
     </article>
