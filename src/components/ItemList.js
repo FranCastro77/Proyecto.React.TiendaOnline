@@ -17,7 +17,7 @@ const ItemList = ({products}) => {
         
         
 
-        (<div className='col-span-2'>
+        (<div className='col-span-3 row-span-3'>
           <Spinner/>
          </div>)
 
