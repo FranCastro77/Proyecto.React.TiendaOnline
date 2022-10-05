@@ -17,9 +17,9 @@ const ItemList = ({products}) => {
         
         
 
-        (<div className='flex text-center'>
+        (<div className='flex-row justify-center'>
           <Spinner/>
-          </div>)
+         </div>)
 
         }
 
