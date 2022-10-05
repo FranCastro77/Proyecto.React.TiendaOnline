@@ -45,7 +45,7 @@ const ItemDetail = ({item}) => {
         {
         quantity ? (
 
-        <div className='mt-16 ml-96'>
+        <div className='mt-16 ml-96 -ml-56'>
           <Link to={'/Cart'}>
             <button className='btn btn-success'>Ir al Carrito</button>
           </Link>

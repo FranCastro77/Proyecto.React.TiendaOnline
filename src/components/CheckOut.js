@@ -80,7 +80,7 @@ const CheckOut = () => {
     
     <h1 className="text-center">Por favor complete sus datos</h1>
 
-    <form className="w-full max-w-sm ml-96 pt-20" onSubmit={userData}>
+    <form className=" text-center w-full max-w-sm ml-96 pt-20" onSubmit={userData}>
 
       <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
