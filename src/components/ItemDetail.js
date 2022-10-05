@@ -29,7 +29,7 @@ const ItemDetail = ({item}) => {
     
     <article className='text-center flex-col ml-35'>
 
-      <div className='flex row'>
+      <div className='flex row justify-center'>
 
           <h1 className=' mx-12 italic font-semibold mt-40'>{item.title} - {item.id}</h1>
 
@@ -56,7 +56,7 @@ const ItemDetail = ({item}) => {
 
         ):
         
-        <div>
+        <div className='ml-28'>
           <ItemCount stock={item.stock} initial={1} onAdd ={onAdd}/>
         </div>  
         
